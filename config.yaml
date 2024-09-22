@@ -30,8 +30,8 @@ menu:
 
 params:
 
-  name: Ben Cuan
-  title: 📓 Amethyst
+  name: mauzy.net
+  title: Mauzy.net
 
   # OPTIONAL: custom favicon location
   # favicon: 'location/to/favicon.png'
@@ -70,7 +70,7 @@ params:
   enableMermaid: true
 
   # Link to your Github repo
-  GitHubLink: https://github.com/64bitpandas/amethyst
+  GitHubLink: https://github.com/Mauzy0x00
 
   # Search (WIP)
   search:
@@ -80,15 +80,15 @@ params:
 
   # Site description and title
   description:
-    Notes, hosted by bencuan
+    Mauzy's Blog Website
 
   
   # Footer links
   links:
     - link_name: Website
-      link: https://bencuan.me
+      link: https://mauzy.net
     - link_name: Blog
-      link: https://blog.bencuan.me
+      link: https://blog.mauzy.net
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
