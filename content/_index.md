@@ -1,33 +1,22 @@
 ---
-title: 💜 Welcome to Amethyst!
+title: blog.mauzy.net
 enableToc: false
 ---
 
-## What is Amethyst?
-Amethyst is a free [Obsidian Publish](https://obsidian.md/publish) alternative that is derived from two existing projects, [Quartz](https://quartz.jzhao.xyz/) and [Hugo Book](https://github.com/alex-shpak/hugo-book).
+## whoami
+Hello! Online I usually go by Mauzy or Mauzy0x00. I am a Cyber Security student and information technology enthusiast. 
 
-The purpose of Amethyst is to provide a space to publish more structured notes created in Obsidian that may not fit in the [digital garden](https://joelhooks.com/digital-garden/) archetype that is well-supported by existing projects.
+I spend most of my time learning something new in this field and I love that there is no end to what you can learn. I love to help others learn something new or accomplish a task so don't hesitate to ask me for help! 
 
-Amethyst was primarily created as a theme for my [course notes](https://notes.bencuan.me).
+## what is this webpage?
+Here I will be writing posts about things I create, setup or hack! These are written mostly for myself and documenation but I hope that they can help someone like you too! These write-ups are written as I complete tasks and I document issues that I ran into
+along the way. They will not be perfect so if you decide to follow along and see an issue or misconfiguration please let me know! 
 
-## Get Started
-> 📚 Step 1: [Setup your own Amethyst instance](setup/setup.md)
+Along with technology write-ups I will also include other things like recipies or fixes on my car that are either unconventional or wasn't well documented :)
 
-> ✏️ Step 2: [Editing Notes in Amethyst](setup/editing.md)
 
-> 🔗 Step 3: [How to setup your Obsidian Vault to work with Amethyst](setup/obsidian.md)
-
-> 👀 Step 4: [Preview Changes](setup/preview%20changes.md)
-
-> 🌍 Step 5: [Hosting Amethyst online!](setup/hosting.md)
-
-> 🎨 Step 6:  [Customizing Amethyst](setup/config.md)
-
-Returning user? Here's how to [[setup/updating|update]] your existing Amethyst instance.
-
-Here's a list of all [setup-related notes](/tags/setup), which are also accessible via the sidebar menu under the "Getting Started" section.
-
-### Troubleshooting
-- 🚧 [Troubleshooting and FAQ](setup/troubleshooting.md)
-- 🐛 [Submit an Issue](https://github.com/64bitpandas/amethyst/issues)
-- 👀 [Contact me](https://bencuan.me/contact)
+### Socails
+- [Discord](https://discord.com/users/501925286754123796)
+- [Github](https://github.com/settings/profile)
+- [Youtube](https://www.youtube.com/channel/UCuha68UGRSXoh1RFhjNnDpw)
+- Email: mauzy.mail@proton.me
