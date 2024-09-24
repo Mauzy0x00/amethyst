@@ -1,5 +1,310 @@
 @import "variables";
 
+:root {
+  /* Light theme from Obsidian */
+  --light: hsl(var(--layer-hue-sat), 89%); /* Layer-0 */
+  --dark: hsl(var(--layer-hue-sat), 83%); /* Layer-3 */
+  --secondary: hsl(var(--purple-hue), var(--secondary-sat), var(--secondary-lit)); /* Purple */
+  --tertiary: hsl(var(--pink-hue), var(--secondary-sat), var(--secondary-lit)); /* Pink */
+  --visited: hsl(var(--blue-hue), var(--secondary-sat), var(--secondary-lit)); /* Blue */
+  --primary: hsl(var(--red-hue), var(--primary-sat), var(--primary-lit)); /* Red */
+  --gray: hsl(var(--layer-hue-sat), 96%); /* Layer-2 */
+  --lightgray: hsl(var(--layer-hue-sat), 99%); /* Layer-1 */
+  --outlinegray: hsl(var(--layer-hue-sat), 80%); /* Layer-4 */
+  --million-progress-bar-color: var(--secondary);
+  --highlighted: hsl(var(--yellow-hue), var(--primary-sat), var(--primary-lit)); /* Yellow */
+  --header: hsl(var(--purple-hue), var(--primary-sat), var(--primary-lit));
+  --title: hsl(var(--blue-hue), var(--primary-sat), var(--primary-lit));
+  --scrollbar: var(--scrollbar-bg);
+  --scrollbar-track: var(--scrollbar-thumb-bg);
+
+  --on-layer-tuple: 234, 14%, 15%;
+
+  --red-hue: 0;
+  --orange-hue: 30;
+  --yellow-hue: 40;
+  --green-hue: 105;
+  --blue-hue: 200;
+  --purple-hue: 300;
+  --purple-pink-hue: 310;
+  --pink-hue: 330;
+
+  --primary-sat: 100%;
+  --secondary-sat: 80%;
+
+  --primary-lit: 43%;
+  --secondary-lit: 50%;
+
+  /* Other variables */
+  --layer-hue-sat: 235, 15%;
+
+  --on-layer: hsl(234, 14%, 15%);
+  --on-layer-600: hsla(234, 14%, 15%, 0.6);
+  --on-layer-400: hsla(234, 14%, 15%, 0.4);
+
+  /* red */
+  --red: hsl(var(--red-hue), var(--primary-sat), var(--primary-lit));
+  --red-900: hsla(var(--red-hue), var(--primary-sat), var(--primary-lit), 0.9);
+
+  --red-secondary-tuple: var(--red-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* orange */
+  --orange: hsl(var(--orange-hue), var(--primary-sat), var(--primary-lit));
+  --orange-100: hsla(var(--orange-hue), var(--primary-sat), var(--primary-lit), 0.1);
+
+  --orangeSecondary: hsl(var(--orange-hue), var(--secondary-sat), var(--secondary-lit));
+
+  /* yellow */ 
+  --yellow: hsl(var(--yellow-hue), var(--primary-sat), var(--primary-lit));
+  --yellow-100: hsla(var(--yellow-hue), var(--primary-sat), var(--primary-lit), 0.1);
+  --yellow-700: hsla(var(--yellow-hue), var(--primary-sat), var(--primary-lit), 0.7);
+
+  --yellow-secondary-tuple: var(--yellow-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* green */
+  --green: hsl(var(--green-hue), var(--primary-sat), var(--primary-lit));
+  --green-200: hsla(var(--green-hue), var(--primary-sat), var(--primary-lit), 0.2);
+
+  --greenSecondary: hsl(var(--green-hue), var(--secondary-sat), var(--secondary-lit));
+
+  /* blue */
+  --blue: hsl(var(--blue-hue), var(--primary-sat), var(--primary-lit));
+  --blue-600: hsla(var(--blue-hue), var(--primary-sat), var(--primary-lit), 0.6);
+
+  --blue-secondary-tuple: var(--blue-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple */
+  --purple: hsl(var(--purple-hue), var(--primary-sat), var(--primary-lit));
+  --purple-200: hsla(var(--purple-hue), var(--primary-sat), var(--primary-lit), 0.2);
+
+  --purple-secondary-tuple: var(--purple-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple-pink */
+  --purple-pink: hsl(var(--purple-pink-hue), var(--primary-sat), var(--primary-lit));
+
+  --purple-pink-secondary-tuple: var(--purple-pink-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* pink */
+  --pink: hsl(var(--pink-hue), var(--primary-sat), var(--primary-lit));
+  --pink-100: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.1);
+  --pink-300: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.3);
+  --pink-400: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.4);
+
+  --pinkSecondary: hsl(var(--pink-hue), var(--secondary-sat), var(--secondary-lit));
+
+  --gradientDegree: 135deg;
+
+  /* Background modifiers */
+  --background-modifier-cover: var(--layer-0); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--layer-2); /*Note background*/
+  --background-primary-alt: var(--layer-1); /*Note Title background active*/
+  --background-secondary: var(--layer-1); /*Sidebar background*/
+  --background-secondary-alt: var(--layer-0); /*Sidebar Title background*/
+
+  --background-modifier-form-field: var(--pink-100);
+  --background-modifier-form-field-highlighted: var(--pink-300);
+  --background-modifier-box-shadow: var(--layer-3);
+  --background-modifier-success: var(--green-200);
+  --background-modifier-error: var(--red-900);
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: var(--red);
+
+  --text-normal: var(--on-layer); /*Text body of note*/
+  --text-muted: var(--on-layer-600);
+
+  --text-accent: var(--pink); /*Links*/
+  --text-accent-hover: var(--pinkSecondary); /*Links hover*/
+  --text-faint: var(--on-layer-600); /*Link brackets color & Gutter Numbers*/
+  --text-error: var(--red);
+  --text-error-hover: var(--redSecondary);
+
+  --text-highlight-bg: var(--yellow-100); /*Search Matches*/
+  --text-highlight-bg-active: var(--orange-100); /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--purple-200); /*Text Selections*/
+
+  /* other custom vars */
+  --indentation-guide-opacity: 10%;
+
+  /* --Obsidian Variables-- */
+  --interactive-normal: var(--layer-1); /*Button Color*/
+  --interactive-hover: var(--layer-0); /*Button Hovered Color*/
+  --interactive-accent: var(--pink); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--orange); /*Menu Button Hover*/
+  --interactive-success: var(--green);
+
+  --scrollbar-bg: var(--layer-2); /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: var(--pink-100); /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--pink-300); /*Scrollbar Dragged Color*/
+  --indentation-guide: var(--layer-4);
+
+  --blockquote-border: var(--red);
+  --link-color: var(--orange); /* internal link */
+  --link-color-hover: var(--orangeSecondary);
+  --link-unresolved-color: var(--yellow-700);
+  --link-unresolved-hover: var(--yellow);
+  --link-external-color: var(--green);
+  --link-external-color-hover: var(--greenSecondary);
+  --table-header-color: var(--layer-2);
+  --text-on-accent: var(--layer-2);
+
+  --background-modifier-border-hover: transparent;
+  --modal-border-color: transparent;
+  --prompt-border-color: transparent;
+  --background-modifier-border-focus: transparent; /* border around active input boxes */
+  --background-modifier-border: transparent; /* separator lines in eg. setting menu, border outline of quotes, tables, line breaks */
+  --input-shadow: none;
+  --blockquote-border-color: none;
+  --ribbon-background: var(--background-secondary-alt);
+  --ribbon-background-collapsed: var(--background-secondary-alt);
+  --code-normal: var(--purple-pink);
+  --code-size: 100%;
+
+  --hr-color: var(--orange); /* Horizontal Line */
+}
+
+[saved-theme="dark"] {
+/* Dark theme Colors */
+  --red-hue: 10;
+  --orange-hue: 35;
+  --yellow-hue: 60;
+  --green-hue: 115;
+  --blue-hue: 170;
+  --purple-hue: 250;
+  --purple-pink-hue: 285;
+  --pink-hue: 330;
+
+  --primary-sat: 100%;
+  --secondary-sat: 100%;
+
+  --primary-lit: 75.1%;
+  --secondary-lit: 90%;
+
+  /* Other variables */
+  --layer-hue-sat: 235, 15%;
+
+  --on-layer: hsl(60, 30%, 96%);
+  --on-layer-600: hsla(60, 30%, 96%, 0.6);
+  --on-layer-400: hsla(60, 30%, 96%, 0.4);
+
+  /* red */
+  --red: hsl(var(--red-hue), var(--primary-sat), var(--primary-lit));
+  --red-900: hsla(var(--red-hue), var(--primary-sat), var(--primary-lit), 0.9);
+
+  --red-secondary-tuple: var(--red-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* orange */
+  --orange: hsl(var(--orange-hue), var(--primary-sat), var(--primary-lit));
+  --orange-100: hsla(var(--orange-hue), var(--primary-sat), var(--primary-lit), 0.1);
+
+  --orangeSecondary: hsl(var(--orange-hue), var(--secondary-sat), var(--secondary-lit));
+
+  /* yellow */ 
+  --yellow: hsl(var(--yellow-hue), var(--primary-sat), var(--primary-lit));
+  --yellow-100: hsla(var(--yellow-hue), var(--primary-sat), var(--primary-lit), 0.1);
+  --yellow-700: hsla(var(--yellow-hue), var(--primary-sat), var(--primary-lit), 0.7);
+
+  --yellow-secondary-tuple: var(--yellow-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* green */
+  --green: hsl(var(--green-hue), var(--primary-sat), var(--primary-lit));
+  --green-200: hsla(var(--green-hue), var(--primary-sat), var(--primary-lit), 0.2);
+
+  --greenSecondary: hsl(var(--green-hue), var(--secondary-sat), var(--secondary-lit));
+
+  /* blue */
+  --blue: hsl(var(--blue-hue), var(--primary-sat), var(--primary-lit));
+  --blue-600: hsla(var(--blue-hue), var(--primary-sat), var(--primary-lit), 0.6);
+
+  --blue-secondary-tuple: var(--blue-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple */
+  --purple: hsl(var(--purple-hue), var(--primary-sat), var(--primary-lit));
+  --purple-200: hsla(var(--purple-hue), var(--primary-sat), var(--primary-lit), 0.2);
+
+  --purple-secondary-tuple: var(--purple-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* purple-pink */
+  --purple-pink: hsl(var(--purple-pink-hue), var(--primary-sat), var(--primary-lit));
+
+  --purple-pink-secondary-tuple: var(--purple-pink-hue), var(--secondary-sat), var(--secondary-lit);
+
+  /* pink */
+  --pink: hsl(var(--pink-hue), var(--primary-sat), var(--primary-lit));
+  --pink-100: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.1);
+  --pink-300: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.3);
+  --pink-400: hsla(var(--pink-hue), var(--primary-sat), var(--primary-lit), 0.4);
+
+  --pinkSecondary: hsl(var(--pink-hue), var(--secondary-sat), var(--secondary-lit));
+
+  --gradientDegree: 135deg;
+
+  /* Background modifiers */
+  --background-modifier-cover: var(--layer-0); /*Obsidian Title Bar Bg*/
+  --background-primary: var(--layer-2); /*Note background*/
+  --background-primary-alt: var(--layer-1); /*Note Title background active*/
+  --background-secondary: var(--layer-1); /*Sidebar background*/
+  --background-secondary-alt: var(--layer-0); /*Sidebar Title background*/
+
+  --background-modifier-form-field: var(--pink-100);
+  --background-modifier-form-field-highlighted: var(--pink-300);
+  --background-modifier-box-shadow: var(--layer-3);
+  --background-modifier-success: var(--green-200);
+  --background-modifier-error: var(--red-900);
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: var(--red);
+
+  --text-normal: var(--on-layer); /*Text body of note*/
+  --text-muted: var(--on-layer-600); 
+  --text-accent: var(--pink); /*Links*/
+  --text-accent-hover: var(--pinkSecondary); /*Links hover*/
+  --text-faint: var(--on-layer-600); /*Link brackets color & Gutter Numbers*/
+  --text-error: var(--red);
+  --text-error-hover: var(--redSecondary);
+
+  --text-highlight-bg: var(--yellow-100); /*Search Matches*/
+  --text-highlight-bg-active: var(--orange-100); /*Active Search Match (Preview Mode)*/
+  --text-selection: var(--purple-200); /*Text Selections*/
+
+  /* other custom vars */
+  --indentation-guide-opacity: 10%;
+
+  /* --Obsidian Variables-- */
+  --interactive-normal: var(--layer-1); /*Button Color*/
+  --interactive-hover: var(--layer-0); /*Button Hovered Color*/
+  --interactive-accent: var(--pink); /*Workspace Note Title Underline*/
+  --interactive-accent-hover: var(--orange); /*Menu Button Hover*/
+  --interactive-success: var(--green);
+
+  --scrollbar-bg: var(--layer-2); /*Scrollbar Gutter Background*/
+  --scrollbar-thumb-bg: var(--pink-100); /*Scrollbar Color*/
+  --scrollbar-active-thumb-bg: var(--pink-300); /*Scrollbar Dragged Color*/
+  --indentation-guide: var(--layer-4);
+
+  --blockquote-border: var(--red);
+  --link-color: var(--orange); /* internal link */
+  --link-color-hover: var(--orangeSecondary);
+  --link-unresolved-color: var(--yellow-700);
+  --link-unresolved-hover: var(--yellow);
+  --link-external-color: var(--green);
+  --link-external-color-hover: var(--greenSecondary);
+  --table-header-color: var(--layer-2);
+  --text-on-accent: var(--layer-2);
+
+  --background-modifier-border-hover: transparent;
+  --modal-border-color: transparent;
+  --prompt-border-color: transparent;
+  --background-modifier-border-focus: transparent; /* border around active input boxes */
+  --background-modifier-border: transparent; /* separator lines in eg. setting menu, border outline of quotes, tables, line breaks */
+  --input-shadow: none;
+  --blockquote-border-color: none;
+  --ribbon-background: var(--background-secondary-alt);
+  --ribbon-background-collapsed: var(--background-secondary-alt);
+  --code-normal: var(--purple-pink);
+  --code-size: 100%;
+
+  --hr-color: var(--orange); /* Horizontal Line */
+}
+
 .markdown {
   line-height: 1.6;
 
@@ -8,28 +313,71 @@
     margin-top: 0;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
+  h1 {
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--pink) 0,
+      var(--orange) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+  }
+
+  h2 {
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--orange) 0,
+      var(--yellow) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+  }
+
+  h3 {
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--orange) 0,
+      var(--yellow) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+  }
+
+  h4 {
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--green) 0,
+      var(--blue) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+  }
+
+  h5 {
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--blue) 0,
+      var(--purple) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+  } 
+
+
   h6 {
-    font-weight: normal;
-    line-height: 1;
-    margin-top: 1.5em;
-    margin-bottom: $padding-16;
-
-    a.anchor {
-      opacity: 0;
-      font-size: 0.75em;
-      vertical-align: middle;
-      text-decoration: none;
-    }
-
-    &:hover a.anchor,
-    a.anchor:focus {
-      opacity: initial;
-    }
+    color: transparent;
+    background-image: linear-gradient(
+      var(--gradientDegree),
+      var(--purple) 0,
+      var(--pink) 100%
+    ); 
+    background-clip: text;
+    -webkit-background-clip: text; 
   }
 
   h4,
@@ -105,6 +453,67 @@
   //     margin-bottom: 0;
   //   }
   // }
+
+  /* Nested bullets are different colours */
+ul li::marker,
+ol li::marker,
+.HyperMD-list-line-1 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-1 .cm-formatting-list {
+  color: var(--pink);
+}
+ul ul li::marker,
+ol ol li::marker,
+.HyperMD-list-line-2 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-2 .cm-formatting-list {
+  color: var(--orange);
+}
+ul ul ul li::marker,
+ol ol ol li::marker,
+.HyperMD-list-line-3 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-3 .cm-formatting-list {
+  color: var(--yellow);
+}
+ul ul ul ul li::marker,
+ol ol ol ol li::marker,
+.HyperMD-list-line-4 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-4 .cm-formatting-list {
+  color: var(--green);
+}
+ul ul ul ul ul li::marker,
+ol ol ol ol ol li::marker,
+.HyperMD-list-line-5 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-5 .cm-formatting-list {
+  color: var(--blue);
+}
+ul ul ul ul ul ul li::marker,
+ol ol ol ol ol ol li::marker,
+.HyperMD-list-line-6 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-6 .cm-formatting-list {
+  color: var(--purple);
+}
+
+/* 7th level and higher: grey */
+ul ul ul ul ul ul ul li::marker,
+ol ol ol ol ol ol ol li::marker,
+.HyperMD-list-line-7 .list-bullet::after,
+.HyperMD-list-line.HyperMD-list-line-7 .cm-formatting-list {
+  color: var(--list-marker-color);
+}
+
+cite {
+  width: 100%;
+  text-align: right;
+  display: block;
+  color: var(--yellow);
+}
+
+thead {
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--purple) 0,
+    var(--pink) 100%
+  );
+}
 
   table {
     overflow: auto;
@@ -197,4 +606,66 @@
   > :last-child {
     margin-bottom: 0;
   }
+}
+
+/*--Code--*/
+/* NOT YET IMPLEMENTED */
+/* *italicized inline code* */
+span.cm-em.cm-inline-code,
+.markdown-preview-view em > code {
+  color: var(--blue);
+}
+
+/* **bold inline code** */
+span.cm-inline-code.cm-strong,
+.markdown-preview-view strong > code {
+  color: var(--pink);
+}
+
+/* ***bold italicized inline code*** */
+.cm-em.cm-inline-code.cm-strong,
+.markdown-preview-view strong > em > code {
+  color: var(--red);
+}
+
+/* ==highlight inline code== */
+span.cm-inline-code.cm-highlight,
+.markdown-preview-view mark > code {
+  color: var(--yellow);
+  /* background-color: transparent; */
+}
+
+/* ~~strikethrough inline code~~ */
+span.cm-inline-code.cm-strikethrough,
+.markdown-preview-view del > code {
+  color: var(--text-muted);
+}
+
+.markdown-preview-view pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  padding-left: 2ch;
+}
+
+.code-block-flair,
+.markdown-source-view.mod-cm6 .code-block-flair {
+  color: var(--orange);
+  padding-top: 1ch;
+}
+
+/* code block and indented code in editing mode */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.markdown-rendered pre code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+}
+
+/*--inline code in headings--*/
+.markdown-preview-view h1 code,
+.markdown-preview-view h2 code,
+.markdown-preview-view h3 code,
+.markdown-preview-view h4 code,
+.markdown-preview-view h5 code,
+.markdown-preview-view h6 code {
+  background-color: unset;
 }
