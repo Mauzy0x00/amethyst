@@ -1,22 +1,22 @@
-# Self Host Your Website without Opening Ports
 
-Here we will be setting up a home server to host a web application without opening any ports on my home network. To accomplish this I'll be using a Cloudflare tunnel. 
+Here we will be setting up a home server to host a web application without opening any ports on my home network. To accomplish this I'll be using a Cloudflare tunnel.
 
 ## 0. Prerequisites
 1. Remote Server
 2. Cloudflare Account
 3. Reliable Internet Connection
 
-Little disclaimer: I am not a professional, just a student. Do your own research but this video should help you get up and running. For the most part I am just following Cloudflare documentation. I highly recommend you have this open in a tab and read through it as needed. 
+>[!warning]
+>A little disclaimer: I am not a professional; just a student. Do your own research but this should help you get up and running. For the most part I am just following Cloudflare and other documentation. I highly recommend you read through official documentation as needed. 
 ## 1. Configure Server
 1. Make sure you have root permissions
 	1. `sudo -l` should output (ALL : ALL) ALL on the current user.
 2. Add current user to sudo as root
 	1. `usermod -aG sudo mauzy`
 3. Install OpenSSH
-	1. `ufw allow OpenSSH
-	2. `ufw enable
-	3. `ufw status
+	1. `ufw allow OpenSSH`
+	2. `ufw enable`
+	3. `ufw status`
 4. Install nginx 
 	1. `sudo ufw allow 'Nginx HTTP'
 ## 2. Add your site to Cloudflare
@@ -28,8 +28,8 @@ Little disclaimer: I am not a professional, just a student. Do your own research
 1. This is where you can show everyone on discord how cool you are by adding your website as a connection
 
 ## 3. Additional Cloudflare settings
-#####  Configure DNSSEC
-1. Enable in cloudflare
+###  Configure DNSSEC
+1. Enable in Cloudflare
 	1. DNS > Settings
 	2. Enable DNSSEC
 2. Find walkthrough for your registrar 
@@ -62,15 +62,15 @@ Little disclaimer: I am not a professional, just a student. Do your own research
 ## 5. Nginx
 1. Set up server block
 	1. Create a directory for your domain with the `p` flag to create any necessary parent directories 
-		- `sudo mkdir -p /var/www/your_domain/html
+		- `sudo mkdir -p /var/www/your_domain/html`
 	2. Now assign ownership of the directory to the current user
-		- `sudo chown -R $USER:$USER /var/www/your_domain/html
+		- `sudo chown -R $USER:$USER /var/www/your_domain/html`
 	3. Ensure permissions are correct with chmod
 		- `sudo chmod -R 755 /var/www/your_domain`
 		- This uses octal notation. This recursively ensures the owner has full permissions
 1. Configure Nginx server block
 	1. `sudo rm /etc/nginx/sites-enabled/default`
-	2. `sudo nano /etc/nginx/sites-available/your_domain
+	2. `sudo nano /etc/nginx/sites-available/your_domain`
 2. Configure nginx configuration file
 ```bash
 server {

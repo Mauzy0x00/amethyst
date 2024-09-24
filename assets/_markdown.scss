@@ -380,19 +380,25 @@
     -webkit-background-clip: text; 
   }
 
-  h4,
-  h5,
-  h6 {
-    font-weight: bolder;
+  /*--Tags--*/
+a {
+  color: transparent;
+  background-image: linear-gradient(
+    var(--gradientDegree),
+    var(--blue) 0,
+    var(--purple) 100%
+  ); 
+  background-clip: text;
+  -webkit-background-clip: text; 
+
+  &:hover {
+    text-decoration: underline;
   }
 
-  h5 {
-    font-size: 0.875em;
+  &:visited {
+    color: var(--gray);
   }
-
-  h6 {
-    font-size: 0.75em;
-  }
+}
 
   b,
   optgroup,
@@ -400,59 +406,15 @@
     font-weight: bolder;
   }
 
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-    // &:visited {
-    //   color: var(--color-visited-link);
-    // }
-  }
-
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  code {
-    padding: 0 $padding-4;
-    background: var(--gray-200);
-    border-radius: $border-radius;
-    font-size: 0.875em;
-  }
-
-  pre {
-    padding: $padding-16;
-    background: var(--gray-100);
-    border-radius: $border-radius;
-    overflow-x: auto;
-
-    code {
-      padding: 0;
-      background: none;
-    }
   }
 
   p {
     word-wrap:break-word;
   }
 
-  // blockquote {
-  //   margin: $padding-16 0;
-  //   padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp
-
-  //   border-inline-start: $padding-4 solid var(--gray-200);
-  //   border-radius: $border-radius;
-
-  //   :first-child {
-  //     margin-top: 0;
-  //   }
-  //   :last-child {
-  //     margin-bottom: 0;
-  //   }
-  // }
 
   /* Nested bullets are different colours */
 ul li::marker,
@@ -609,7 +571,25 @@ thead {
 }
 
 /*--Code--*/
-/* NOT YET IMPLEMENTED */
+
+/* inline code */
+code {
+  background-color: #1c1d26; 
+  color: #abb2bf; /* Text color */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* code blocks */
+pre {
+  background-color:#1c1d26; /* Background color for code blocks */
+  color: #abb2bf;
+  padding: 1rem; 
+  border-radius: 20px;
+  overflow: auto; 
+}
+
+/*--from Obsidian-- */
 /* *italicized inline code* */
 span.cm-em.cm-inline-code,
 .markdown-preview-view em > code {
