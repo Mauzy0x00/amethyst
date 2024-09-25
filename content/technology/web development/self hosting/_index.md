@@ -1,4 +1,4 @@
-
+# Self Host Your Website without Opening Ports
 Here we will be setting up a home server to host a web application without opening any ports on my home network. To accomplish this I'll be using a Cloudflare tunnel.
 
 ## 0. Prerequisites
@@ -18,14 +18,15 @@ Here we will be setting up a home server to host a web application without openi
 	2. `ufw enable`
 	3. `ufw status`
 4. Install nginx 
-	1. `sudo ufw allow 'Nginx HTTP'
+	1. `sudo ufw allow 'Nginx HTTP'`
 ## 2. Add your site to Cloudflare
 1. Register using Cloudflare
 2. If you have an existing domain, click add site 
 3. Copy the name servers from Cloudflare to your registrar
-	1. Ensure DNSSEC is disabled before doing this
-**DNS Records**
-1. This is where you can show everyone on discord how cool you are by adding your website as a connection
+	- Ensure DNSSEC is disabled before doing this
+>[!note]
+> DNS Records:
+> This is where you can show everyone on Discord how cool you are by adding your website as a connection.
 
 ## 3. Additional Cloudflare settings
 ###  Configure DNSSEC
