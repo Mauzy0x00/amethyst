@@ -1,7 +1,148 @@
 {
   "index": {
-    "links": {},
-    "backlinks": {}
+    "links": {
+      "/technology/Grey-Hat-Hacking/": [
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/The-Art-of-War",
+          "text": "The Art of War"
+        },
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Buffer-Overflow",
+          "text": "Buffer Overflow"
+        },
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Buffer-Overflow",
+          "text": "Buffer Overflow"
+        },
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/NASM-Cheat-Sheet",
+          "text": "NASM Cheat Sheet#Registers"
+        },
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Windows-Kernel-Exploitation",
+          "text": "Windows Kernel Exploitation"
+        }
+      ],
+      "/technology/Linux/Arch-Linux-Journal/": [
+        {
+          "source": "/technology/Linux/Arch-Linux-Journal/",
+          "target": "/Pacman",
+          "text": "pacman -Qdt"
+        }
+      ],
+      "/technology/Operating-System-Build/Bare-Bones-Kernel/": [
+        {
+          "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+          "target": "/Further-Reading-and-Concepts",
+          "text": "Further Reading and Concepts#Kernel Entry Point"
+        },
+        {
+          "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+          "target": "/Further-Reading-and-Concepts",
+          "text": "ABI"
+        }
+      ]
+    },
+    "backlinks": {
+      "/Buffer-Overflow": [
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Buffer-Overflow",
+          "text": "Buffer Overflow"
+        },
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Buffer-Overflow",
+          "text": "Buffer Overflow"
+        }
+      ],
+      "/Further-Reading-and-Concepts": [
+        {
+          "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+          "target": "/Further-Reading-and-Concepts",
+          "text": "Further Reading and Concepts#Kernel Entry Point"
+        },
+        {
+          "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+          "target": "/Further-Reading-and-Concepts",
+          "text": "ABI"
+        }
+      ],
+      "/NASM-Cheat-Sheet": [
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/NASM-Cheat-Sheet",
+          "text": "NASM Cheat Sheet#Registers"
+        }
+      ],
+      "/Pacman": [
+        {
+          "source": "/technology/Linux/Arch-Linux-Journal/",
+          "target": "/Pacman",
+          "text": "pacman -Qdt"
+        }
+      ],
+      "/The-Art-of-War": [
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/The-Art-of-War",
+          "text": "The Art of War"
+        }
+      ],
+      "/Windows-Kernel-Exploitation": [
+        {
+          "source": "/technology/Grey-Hat-Hacking/",
+          "target": "/Windows-Kernel-Exploitation",
+          "text": "Windows Kernel Exploitation"
+        }
+      ]
+    }
   },
-  "links": null
+  "links": [
+    {
+      "source": "/technology/Grey-Hat-Hacking/",
+      "target": "/The-Art-of-War",
+      "text": "The Art of War"
+    },
+    {
+      "source": "/technology/Grey-Hat-Hacking/",
+      "target": "/Buffer-Overflow",
+      "text": "Buffer Overflow"
+    },
+    {
+      "source": "/technology/Grey-Hat-Hacking/",
+      "target": "/Buffer-Overflow",
+      "text": "Buffer Overflow"
+    },
+    {
+      "source": "/technology/Grey-Hat-Hacking/",
+      "target": "/NASM-Cheat-Sheet",
+      "text": "NASM Cheat Sheet#Registers"
+    },
+    {
+      "source": "/technology/Grey-Hat-Hacking/",
+      "target": "/Windows-Kernel-Exploitation",
+      "text": "Windows Kernel Exploitation"
+    },
+    {
+      "source": "/technology/Linux/Arch-Linux-Journal/",
+      "target": "/Pacman",
+      "text": "pacman -Qdt"
+    },
+    {
+      "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+      "target": "/Further-Reading-and-Concepts",
+      "text": "Further Reading and Concepts#Kernel Entry Point"
+    },
+    {
+      "source": "/technology/Operating-System-Build/Bare-Bones-Kernel/",
+      "target": "/Further-Reading-and-Concepts",
+      "text": "ABI"
+    }
+  ]
 }
