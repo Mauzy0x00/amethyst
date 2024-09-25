@@ -1,0 +1,17 @@
+### Kernel Entry Point
+- (`_Start` in your context)**: The kernel entry point is the specific memory address where the execution of the kernel begins. This address is typically defined in your kernel code, and the bootloader is designed to jump to this address after loading the kernel into memory. Once the control transfers to the kernel, it assumes control of the system's resources and functions.
+- **Bootloader's Task Completion**: After loading the kernel into memory and transferring control to the kernel entry point, the bootloader's task is essentially completed. It has done its job of loading the operating system kernel into memory and initializing the system. At this point, the bootloader doesn't need to stay in memory anymore.
+- **Where Does the Bootloader Go?**: After the kernel takes over, the bootloader doesn't have a specific place it "goes" in memory. It simply ceases to execute because the CPU's instruction pointer is now pointing to the kernel's entry point. The bootloader code, which was previously in memory, is effectively overwritten by the kernel code as the kernel is loaded.
+### ABI
+- The Application Binary Interface (ABI) is a set of rules and conventions that dictate how programs interact with a computer's hardware and operating system. It defines things like data type sizes, calling conventions, and system call numbers. In essence, the ABI ensures that software components, like libraries and applications, can work seamlessly together by following a common set of rules regarding function calls, data structures, and system interactions.
+###  VGA Text Mode and BIOS Deprecated
+- Older methods of interacting with the computer's display, like VGA text mode and BIOS, are becoming obsolete on newer machines. These methods are being replaced with more modern techniques.
+    
+### UEFI and Framebuffers
+- UEFI (Unified Extensible Firmware Interface) is the modern replacement for BIOS. It supports pixel buffers, which are essentially areas in memory where you can draw pixels directly on the screen. This is in contrast to the older VGA text mode, which dealt with characters on a grid.
+### Multiboot Flags and VESA VBE
+- When you're working on low-level programming tasks like creating an operating system, you can set up a framebuffer using techniques like Multiboot flags (a protocol used by bootloaders like GRUB) or VESA VBE (VESA Video BIOS Extensions) directly. These methods allow you to initialize a pixel buffer for drawing graphics.
+### Drawing Text in Framebuffer Mode
+- Unlike VGA text mode where characters are predefined, in a framebuffer, you have to draw each character (glyph) yourself. This means you need a font, which is essentially a set of bitmap images for each character. Most Linux distributions provide PC Screen Fonts that you can use. To display text, you'll need functions similar to `terminal_putchar` but adapted for drawing pixels instead of using predefined characters.
+### Implementation Details
+- Even in framebuffer mode, you still need to manage things like the cursor position, handle line breaks, and implement scrolling, just like you would in VGA text mode. These concepts remain the same; it's just the way you interact with the display that has changed.

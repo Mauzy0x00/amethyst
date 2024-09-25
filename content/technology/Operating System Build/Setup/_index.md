@@ -1,0 +1,25 @@
+## Using Windows Subsystem for Linux (Debian)
+- Install list
+	- gcc
+	- build-essential
+	- bison 
+	- flex 
+	- libgmp3-dev 
+	- libmpc-dev 
+	- libmpfr-dev 
+	- texinfo
+- Cross-Compiler
+	- `git clone https://github.com/lordmilko/i686-elf-tools`
+	- `cd i686-elf-tools`
+	- `./i686-elf-tools.sh linux`
+## Using Manjaro VM
+- Dependencies
+	- GCC (existing release you wish to replace), or another system C compiler
+	- G++ (if building a version of GCC >= 4.8.0), or another system C++ compiler
+	- Make
+	- Bison
+	- Flex
+	- GMP
+	- MPFR
+	- MPC
+- Download gcc and bin-utils to src and make them 

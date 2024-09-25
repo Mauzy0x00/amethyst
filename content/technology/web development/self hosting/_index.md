@@ -1,6 +1,7 @@
-# Self Host Your Website without Opening Ports
-Here we will be setting up a home server to host a web application without opening any ports on my home network. To accomplish this I'll be using a Cloudflare tunnel.
+This post is a follow along to a Youtube video walk-through that I recorded. We will be setting up a home server to host a web application without opening any ports on my home network. To accomplish this I'll be using a Cloudflare tunnel.
 
+>[!note]
+> The `$` denotes a terminal command. Anything before `$` denotes the current working directory.
 ## 0. Prerequisites
 1. Remote Server
 2. Cloudflare Account
@@ -24,8 +25,9 @@ Here we will be setting up a home server to host a web application without openi
 2. If you have an existing domain, click add site 
 3. Copy the name servers from Cloudflare to your registrar
 	- Ensure DNSSEC is disabled before doing this
+	
 >[!note]
-> DNS Records:
+>DNS Records:
 > This is where you can show everyone on Discord how cool you are by adding your website as a connection.
 
 ## 3. Additional Cloudflare settings
@@ -56,23 +58,38 @@ Here we will be setting up a home server to host a web application without openi
 2. In the access tab, Launch the Zero Trust Platform. They move the location of this all of the time for no reason. 
 3. Copy and paste into your server shell
 ## 4. Setup Firewall
-1. `curl https://raw.githubusercontent.com/Mauzy0x/Scripts/main/Cloudflare%20IPtable%20setup.sh >> ipScript.sh`
-2. `chmod +x ipScript.sh`
-3. `./ipScript.sh`
+1. Download the firewall setup script from my Github page
+```BASH
+~/$ curl https://raw.githubusercontent.com/Mauzy0x/Scripts/main/Cloudflare%20IPtable%20setup.sh >> ipScript.sh
+```
+3. Make the script executable
+```BASH
+~/$ chmod +x ipScript.sh
+```
+5. Run the script
+```BAsh
+~/$ ./ipScript.sh
+```
 
 ## 5. Nginx
 1. Set up server block
 	1. Create a directory for your domain with the `p` flag to create any necessary parent directories 
-		- `sudo mkdir -p /var/www/your_domain/html`
+	```BASH
+		sudo mkdir -p /var/www/your_domain/html
+	```
 	2. Now assign ownership of the directory to the current user
-		- `sudo chown -R $USER:$USER /var/www/your_domain/html`
+	```BASH
+		sudo chown -R $USER:$USER /var/www/your_domain/html
+	```
 	3. Ensure permissions are correct with chmod
-		- `sudo chmod -R 755 /var/www/your_domain`
+		```BASH
+		sudo chmod -R 755 /var/www/your_domain
+		```
 		- This uses octal notation. This recursively ensures the owner has full permissions
-1. Configure Nginx server block
+2. Configure Nginx server block
 	1. `sudo rm /etc/nginx/sites-enabled/default`
 	2. `sudo nano /etc/nginx/sites-available/your_domain`
-2. Configure nginx configuration file
+3. Configure nginx configuration file
 ```bash
 server {
     listen 5552;
@@ -110,11 +127,5 @@ server {
 		- `curl localhost:portNo`
 		- If this command does not return your HTML then there is an issue with your NGINX configuration
 	2. If you get an error where it is 'argo tunnel error' there is an issue where Cloudflare cannot see your service. 
-		1. Is your tunnel config pointing to \http://localhost:portNo ? 
-		   It needs to be http and it needs to be the same port number specified in your Nginx config.
-- Errors with the Certifications on your origin server
-	1. Nginx and openssl not recognizing the PEM file
-		1. I don't know
-		![[Pasted image 20240314000454.png]]![[Pasted image 20240314000517.png]]
-		- The text was copied directly into the terminal and saved
-		- Make sure there aren't any spaces left in your file, they will throw an error
+		1. Is your tunnel config pointing to http://localhost:portNo ? 
+		- It needs to be http and it needs to be the same port number specified in your Nginx config.
